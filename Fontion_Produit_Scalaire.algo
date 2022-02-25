@@ -1,0 +1,13 @@
+FUNCTION fonction_produit(VAR t1,t2 : ARRAY_OF INTEGER[n];n: INTEGER) : FLOAT;
+VAR
+     ps: FLOAT;
+    i,j: INTEGER;
+BEGIN
+    ps:= 0.0;
+    FOR i FROM 0 TO n-1 STEP 1  DO 
+        FOR j FROM 0 TO n-1 STEP 1  DO
+             ps := ps + t1[i] * t2[i];
+        END_FOR
+    END_FOR
+    RETURN ('Le produit scalaire est ',ps) ;
+END
